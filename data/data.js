@@ -113,7 +113,7 @@ export const service = [
     ],
   },
   {
-    name: 'Full Stack Web Development',
+    name: 'Full Stack Development',
     description:
       'service with more than 3 years of experience. providing quality work to cliets and comapanies',
     serviceList: ['I will built full stack website using MERN Stack'],
@@ -126,7 +126,7 @@ export const service = [
   },
 ];
 
-export const workCategory = ['react.js', 'next.js', 'typescript'];
+export const workCategory = ['react', 'next', 'typescript'];
 export const works = [
   {
     name: 'todo-app',
