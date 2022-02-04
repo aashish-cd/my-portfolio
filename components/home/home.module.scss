@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  // background-color: black;
+  height: 60vh;
+  .preText {
+    font-size: 1.5rem;
+    // color: #fff;
+    margin-bottom: 1rem;
+  }
+  .name {
+    font-size: 2rem;
+    // color: #fff;
+    margin-bottom: 1rem;
+  }
+  .titleText {
+    font-size: 1.5rem;
+    // color: #fff;
+    margin-bottom: 1rem;
+  }
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 1rem;
+
+    .button {
+      width: 10%;
+
+      background-color: rgb(40, 49, 49);
+
+      // border: solid rgb(125, 255, 255) !important;
+      border: none;
+      border-width: 0 1px;
+      color: white;
+      margin: auto 5px;
+
+      border-radius: 15px 0;
+      font-size: 1.1rem;
+      padding: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  text-align: center;
+
+  .image {
+    border-radius: 50% 50% 0 0;
+    width: 30%;
+    margin: auto 5px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    // background-color: black;
+    height: 60vh;
+    .preText {
+      font-size: 1rem;
+      // color: #fff;
+      margin-bottom: 1rem;
+    }
+    .name {
+      font-size: 2rem;
+      // color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .titleText {
+      font-size: 1.2rem;
+      // color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .buttonContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      margin-top: 1rem;
+
+      .button {
+        width: 40%;
+
+        background-color: rgb(40, 49, 49);
+
+        // border: solid rgb(125, 255, 255) !important;
+        border: none;
+        border-width: 0 1px;
+        // color: white;
+        margin: auto 5px;
+
+        border-radius: 15px 0;
+        font-size: 1.1rem;
+        padding: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+  .imageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    text-align: center;
+    margin-top: -2rem;
+
+    .image {
+      border-radius: 50% 50% 0 0;
+      width: 70%;
+      margin: auto 5px;
+    }
+  }
+}

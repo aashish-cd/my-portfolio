@@ -1,0 +1,9 @@
+QuestionModel(
+  'The First astronuts to travel to space came from which country ?',
+  {
+    'United States': false,
+    'Soviet Union (now Russia)': true,
+    China: false,
+    Rocketonia: false,
+  }
+);

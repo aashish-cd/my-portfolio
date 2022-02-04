@@ -1,0 +1,118 @@
+.smallText {
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 5rem;
+}
+.bigText {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 2rem;
+  .singleExperience {
+    display: flex;
+    width: 40%;
+    max-width: 50%;
+    min-height: 300px;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    border: #000 solid 1px;
+    background-color: rgb(40, 49, 49);
+    border-radius: 40px 0;
+    margin: 20px;
+    padding: 20px;
+    .name {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .skillContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: left;
+      justify-content: left;
+      // background-color: red;
+      width: 75%;
+
+      .singleSkill {
+        padding: 5px 10px;
+        margin: 0 5px;
+        // background-color: green;
+        width: 200px;
+
+        .skillName {
+          font-size: 1rem;
+          font-weight: bold;
+        }
+        .skillLevel {
+          font-size: 0.8rem;
+          font-weight: light;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 2rem;
+    .singleExperience {
+      display: flex;
+      width: 90%;
+      max-width: 100%;
+      min-height: 300px;
+      flex-direction: column;
+      justify-content: center;
+
+      align-items: center;
+      border: #000 solid 1px;
+      background-color: rgb(40, 49, 49);
+      border-radius: 40px 0;
+      margin: 20px;
+      padding: 20px;
+      .name {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .skillContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+        justify-content: left;
+        // background-color: red;
+        width: 75%;
+
+        .singleSkill {
+          padding: 5px 10px;
+          margin: 0 5px;
+          // background-color: green;
+          width: 200px;
+
+          .skillName {
+            font-size: 1rem;
+            font-weight: bold;
+          }
+          .skillLevel {
+            font-size: 0.8rem;
+            font-weight: light;
+          }
+        }
+      }
+    }
+  }
+}
