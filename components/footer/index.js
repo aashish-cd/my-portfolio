@@ -8,7 +8,7 @@ const Footer = () => {
       <h1>{details.name}</h1>
       <div className={style.socialLinkContainer}>
         {social.map((ss, index) => (
-          <a href={ss.link} key={index}>
+          <a href={ss.url} key={index}>
             <i className={`bx ${ss.icon}`}></i>
           </a>
         ))}

@@ -1,11 +1,26 @@
-import React, { useState } from 'react';
-import { workCategory, works } from '../../data/data';
+import React, { useEffect, useState } from 'react';
+import { workCategory } from '../../data/data';
 import style from './work.module.scss';
+import axios from 'axios';
 
 const Work = () => {
-  const [work, setWork] = useState(works);
+  const [works, setWorks] = useState([]);
+  const [work, setWork] = useState([]);
+  const fetchWork = async () => {
+    const res = await axios.get(
+      'https://portfolio-backend-aashish.herokuapp.com/api/projects'
+    );
+    setWorks(res.data);
+    setWork(works);
+    console.log(res.data);
+  };
+  useEffect(() => {
+    fetchWork();
+  }, []);
   const filterWork = (category) => {
-    setWork(works.filter((ss) => ss.category.toLowerCase().includes(category)));
+    setWork(
+      works?.filter((ss) => ss.category.toLowerCase().includes(category))
+    );
     console.log(category);
     console.log(work);
     console.log(works);
@@ -32,11 +47,16 @@ const Work = () => {
         <div className={style.workContainer}>
           {work.map((ss, index) => (
             <div key={index} className={style.singleWork}>
-              <img src={ss.image} alt={ss.name} className={style.image} />
+              <img src={ss.thumbnail} alt={ss.name} className={style.image} />
               <h2 className={style.title}>{ss.name}</h2>
               <div className={style.demo}>
                 {/* <p>See Demo</p> */}
-                <i className='bx bx-right-arrow-alt'></i>
+                <a href={ss.githubLink}>
+                  <i className='bx bxl-github'></i>
+                </a>
+                <a href={ss.link}>
+                  <i className='bx bx-low-vision'></i>
+                </a>
               </div>
             </div>
           ))}
