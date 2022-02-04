@@ -10,9 +10,9 @@ const Work = () => {
     const res = await axios.get(
       'https://portfolio-backend-aashish.herokuapp.com/api/projects'
     );
-    setWorks(res.data);
-    setWork(works);
-    console.log(res.data);
+    await setWorks(res.data);
+    await setWork(res.data);
+    // console.log(res.data);
   };
   useEffect(() => {
     fetchWork();
@@ -21,9 +21,6 @@ const Work = () => {
     setWork(
       works?.filter((ss) => ss.category.toLowerCase().includes(category))
     );
-    console.log(category);
-    console.log(work);
-    console.log(works);
   };
   return (
     <>
